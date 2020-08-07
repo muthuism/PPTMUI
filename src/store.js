@@ -15,6 +15,8 @@ if (window.navigator.userAgent.includes('Chrome')) {
       applyMiddleware(...middleware),
       window.__REDUX_DEVTOOLS_EXTENSION__ &&
         window.__REDUX_DEVTOOLS_EXTENSION__()
+        ? window.__REDUX_DEVTOOLS_EXTENSION__()
+        : (a) => a
     )
   );
 } else {

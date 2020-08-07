@@ -5,6 +5,7 @@ import Header from './components/layout/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AddProject from './components/project/AddProject';
+import UpdateProject from './components/project/UpdatProject';
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -14,8 +15,9 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-          <Dashboard />
+          <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/addProject" component={AddProject} />
+          <Route exact path="/updateProject/:id" component={UpdateProject} />
         </div>
       </Router>
     </Provider>
